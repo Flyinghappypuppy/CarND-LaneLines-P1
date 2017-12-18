@@ -45,7 +45,7 @@ Use the weighted average to extrapolate
 If you'd like to include images to show how the pipeline works, here is how to include an image: 
 
 ![alt text][image1]	
-<img src="https://github.com/timeperceptron/Lane-Detection-CarND-P1/blob/master/demo_gifs/challenge.gif" width="600" >
+<img src="https://github.com/timeperceptron/Lane-Detection-CarND-P1/blob/master/demo_gifs/challenge.gif" width="650" >
 
 
 

@@ -15,32 +15,39 @@ The goals / steps of this project are the following:
 
 [image1]: ./examples/grayscale.jpg "Grayscale"
 
-
-
 ---
 
 ### Reflection
 
 ### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
 
-My pipeline consisted of 5 steps. First, I converted the images to grayscale, then I .... 
+Original Video:
+![alt text][./demo_gifs/orig.gif]
 
-Convert to Gray Scale
-Apply Gausian Blur
-Apply Canny
-Select region 
-Hough Transformation
+My pipeline consisted of 5 steps:
 
-
-Solution
-
-
-In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
-Filter based on angle and intercept
-Filter outliers using greedy last 10 values SD
-To smoothen the line draw - used a weighted average of current line with mean of Last N lines
-Fill in frames with no lines with mean of last N
+1. Convert the image to Gray Scale.
+2. Apply Gausian Blur to the gray scale image
+3. Apply Canny edge detection algorithm on the image
+![alt text][./demo_gifs/pipeline/a.gif]
+4. Select a quadrilateral region to select just the road region 
+![alt text][./demo_gifs/pipeline/b1.gif]
+![alt text][./demo_gifs/pipeline/b2.gif]
+5. Apply Hough Transformation to obtain lines
+![alt text][./demo_gifs/pipeline/c.gif]
+6. Modified the draw_lines() to do the following:
+	1. Filter lines that dont fall within the acceptable angle and y-intercept ranges.
+	2. Filter outliers that dont fall within a factor of Standard Deviation (Standard Deviation is calculated on upto last 12 values - greedily selected)
+	Before Filters:
+	![alt text][./demo_gifs/draw_line/challenge.gif]
+	After Filters:
+	![alt text][./demo_gifs/draw_line/with_angle-intercept_filter.gif]
+	3. To smoothen the line draw - used a weighted average of current line with mean of Last N lines.Fill in frames with no lines with mean of last N
 Use the weighted average to extrapolate 
+	No Smoothening:
+	![alt text][./demo_gifs/draw_line/non-smoothened.gif]
+	After Filters:
+	![alt text][./demo_gifs/draw_line/solidYellowLeft.gif]
 
 If you'd like to include images to show how the pipeline works, here is how to include an image: 
 

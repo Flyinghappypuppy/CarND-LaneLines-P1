@@ -52,13 +52,13 @@ My pipeline consisted of 5 steps:
 	
 	3. To smoothen the line draw, I used a weighted average of the parameters of the current line and that of the last N lines. When frames didnt have a line, used the mean of last 'N' lines' parameters as a substitute. 
 
-			No Smoothening:
+		No Smoothening:
 			
-			<img src="https://github.com/timeperceptron/Lane-Detection-CarND-P1/blob/master/demo_gifs/draw_line/non-smoothened.gif" width="600" >
+		<img src="https://github.com/timeperceptron/Lane-Detection-CarND-P1/blob/master/demo_gifs/draw_line/non-smoothened.gif" width="600" >
 			
-			After Smoothening:
+		After Smoothening:
 	
-			<img src="https://github.com/timeperceptron/Lane-Detection-CarND-P1/blob/master/demo_gifs/draw_line/smoothened.gif" width="600" >
+		<img src="https://github.com/timeperceptron/Lane-Detection-CarND-P1/blob/master/demo_gifs/draw_line/smoothened.gif" width="600" >
 
 	4. Use the weighted average to extrapolate 
 

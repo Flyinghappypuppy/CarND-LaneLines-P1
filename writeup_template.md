@@ -42,11 +42,12 @@ My pipeline consisted of 5 steps:
 	
 	2. Filter outliers that dont fall within a factor of Standard Deviation (Standard Deviation is calculated on upto last 12 values - greedily selected)
 	
-
 	Before Filters:
 	<img src="https://github.com/timeperceptron/Lane-Detection-CarND-P1/blob/master/demo_gifs/draw_line/no-filter.gif" width="600" >
+	
 	After Filters:
 	<img src="https://github.com/timeperceptron/Lane-Detection-CarND-P1/blob/master/demo_gifs/draw_line/filter.gif" width="600" >
+	
 	3. To smoothen the line draw - used a weighted average of current line with mean of Last N lines.Fill in frames with no lines with mean of last N
 Use the weighted average to extrapolate 
 	No Smoothening:

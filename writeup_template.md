@@ -25,7 +25,8 @@ My pipeline consisted of 5 steps:
 1. Convert the image to Gray Scale.
 2. Apply Gausian Blur to the gray scale image
 3. Apply Canny edge detection algorithm on the image
-<img src="https://github.com/timeperceptron/Lane-Detection-CarND-P1/blob/master/demo_gifs/pipeline/a.gif" width="600" >
+	After first 3 steps:
+	<img src="https://github.com/timeperceptron/Lane-Detection-CarND-P1/blob/master/demo_gifs/pipeline/a.gif" width="600" >
 4. Select a quadrilateral region to select just the road region 
 <img src="https://github.com/timeperceptron/Lane-Detection-CarND-P1/blob/master/demo_gifs/pipeline/b1.gif" width="600" >
 <img src="https://github.com/timeperceptron/Lane-Detection-CarND-P1/blob/master/demo_gifs/pipeline/b2.gif" width="600" >

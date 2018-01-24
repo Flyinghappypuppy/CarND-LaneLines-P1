@@ -17,37 +17,37 @@ The goals / steps of this project are the following:
 ### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
 
 Original Video:
-<img src="https://github.com/timeperceptron/Lane-Detection-CarND-P1/blob/master/demo_gifs/orig" width="650" >
+<img src="https://github.com/timeperceptron/Lane-Detection-CarND-P1/blob/master/demo_gifs/orig.gif" width="650" >
 
 My pipeline consisted of 5 steps:
 
 1. Convert the image to Gray Scale.
 2. Apply Gausian Blur to the gray scale image
 3. Apply Canny edge detection algorithm on the image
-<img src="https://github.com/timeperceptron/Lane-Detection-CarND-P1/blob/master/demo_gifs/pipeline/a" width="650" >
+<img src="https://github.com/timeperceptron/Lane-Detection-CarND-P1/blob/master/demo_gifs/pipeline/a.gif" width="650" >
 4. Select a quadrilateral region to select just the road region 
-<img src="https://github.com/timeperceptron/Lane-Detection-CarND-P1/blob/master/demo_gifs/pipeline/b1" width="650" >
-<img src="https://github.com/timeperceptron/Lane-Detection-CarND-P1/blob/master/demo_gifs/pipeline/b2" width="650" >
+<img src="https://github.com/timeperceptron/Lane-Detection-CarND-P1/blob/master/demo_gifs/pipeline/b1.gif" width="650" >
+<img src="https://github.com/timeperceptron/Lane-Detection-CarND-P1/blob/master/demo_gifs/pipeline/b2.gif" width="650" >
 5. Apply Hough Transformation to obtain lines
-<img src="https://github.com/timeperceptron/Lane-Detection-CarND-P1/blob/master/demo_gifs/pipeline/c" width="650" >
+<img src="https://github.com/timeperceptron/Lane-Detection-CarND-P1/blob/master/demo_gifs/pipeline/c.gif" width="650" >
 6. Modified the draw_lines() to do the following:
 	1. Filter lines that dont fall within the acceptable angle and y-intercept ranges.
 	2. Filter outliers that dont fall within a factor of Standard Deviation (Standard Deviation is calculated on upto last 12 values - greedily selected)
 	Before Filters:
-	<img src="https://github.com/timeperceptron/Lane-Detection-CarND-P1/blob/master/demo_gifs/draw_line/no-filter" width="650" >
+	<img src="https://github.com/timeperceptron/Lane-Detection-CarND-P1/blob/master/demo_gifs/draw_line/no-filter.gif" width="650" >
 	After Filters:
-	<img src="https://github.com/timeperceptron/Lane-Detection-CarND-P1/blob/master/demo_gifs/draw_line/filter" width="650" >
+	<img src="https://github.com/timeperceptron/Lane-Detection-CarND-P1/blob/master/demo_gifs/draw_line/filter.gif" width="650" >
 	3. To smoothen the line draw - used a weighted average of current line with mean of Last N lines.Fill in frames with no lines with mean of last N
 Use the weighted average to extrapolate 
 	No Smoothening:
-	<img src="https://github.com/timeperceptron/Lane-Detection-CarND-P1/blob/master/demo_gifs/draw_line/non-smoothened" width="650" >
+	<img src="https://github.com/timeperceptron/Lane-Detection-CarND-P1/blob/master/demo_gifs/draw_line/non-smoothened.gif" width="650" >
 	After Smoothening:
-	<img src="https://github.com/timeperceptron/Lane-Detection-CarND-P1/blob/master/demo_gifs/draw_line/smoothened" width="650" >
+	<img src="https://github.com/timeperceptron/Lane-Detection-CarND-P1/blob/master/demo_gifs/draw_line/smoothened.gif" width="650" >
 
 If you'd like to include images to show how the pipeline works, here is how to include an image: 
 
 Finally:
-<img src="https://github.com/timeperceptron/Lane-Detection-CarND-P1/blob/master/demo_gifs/final" width="650" >
+<img src="https://github.com/timeperceptron/Lane-Detection-CarND-P1/blob/master/demo_gifs/final.gif" width="650" >
 
 
 ### 2. Identify potential shortcomings with your current pipeline

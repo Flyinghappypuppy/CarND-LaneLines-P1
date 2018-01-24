@@ -60,7 +60,7 @@ My pipeline consisted of 5 steps:
 	
 		<img src="https://github.com/timeperceptron/Lane-Detection-CarND-P1/blob/master/demo_gifs/draw_line/smoothened.gif" width="600" >
 
-	4. Use the weighted average to extrapolate 
+	4. Use the above calculated weighted average to extrapolate to appropriate length in every frame.
 
 
 Final result after the pipeline:

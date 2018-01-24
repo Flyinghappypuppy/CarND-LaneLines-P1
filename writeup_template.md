@@ -38,24 +38,33 @@ My pipeline consisted of 5 steps:
 
 6. Modified the draw_lines() to do the following:
 	
-	1. Filter lines that dont fall within the acceptable angle and y-intercept ranges.
+	1. Filter lines that dont fall within the acceptable slope and y-intercept ranges.
 	
 	2. Filter outliers that dont fall within a factor of Standard Deviation (Standard Deviation is calculated on upto last 12 values - greedily selected). 
 	
-	Without filters(On Left) and After using filters(On Right):
+		Before using filters:
 
-	<img src="https://github.com/timeperceptron/Lane-Detection-CarND-P1/blob/master/demo_gifs/draw_line/no-filter.gif" width="300" ><img src="https://github.com/timeperceptron/Lane-Detection-CarND-P1/blob/master/demo_gifs/draw_line/filter.gif" width="300" >
+		<img src="https://github.com/timeperceptron/Lane-Detection-CarND-P1/blob/master/demo_gifs/draw_line/no-filter.gif" width="600" >
+
+		After using filters:
+
+		<img src="https://github.com/timeperceptron/Lane-Detection-CarND-P1/blob/master/demo_gifs/draw_line/filter.gif" width="600" >
 	
-	3. To smoothen the line draw - used a weighted average of current line with mean of Last N lines.Fill in frames with no lines with mean of last N
-Use the weighted average to extrapolate 
-	No Smoothening:
-	<img src="https://github.com/timeperceptron/Lane-Detection-CarND-P1/blob/master/demo_gifs/draw_line/non-smoothened.gif" width="600" >
-	After Smoothening:
-	<img src="https://github.com/timeperceptron/Lane-Detection-CarND-P1/blob/master/demo_gifs/draw_line/smoothened.gif" width="600" >
+	3. To smoothen the line draw, I used a weighted average of the parameters of the current line and that of the last N lines. When frames didnt have a line, used the mean of last 'N' lines' parameters as a substitute. 
 
-If you'd like to include images to show how the pipeline works, here is how to include an image: 
+			No Smoothening:
+			
+			<img src="https://github.com/timeperceptron/Lane-Detection-CarND-P1/blob/master/demo_gifs/draw_line/non-smoothened.gif" width="600" >
+			
+			After Smoothening:
+	
+			<img src="https://github.com/timeperceptron/Lane-Detection-CarND-P1/blob/master/demo_gifs/draw_line/smoothened.gif" width="600" >
 
-Finally:
+	4. Use the weighted average to extrapolate 
+
+
+Final result after the pipeline:
+
 <img src="https://github.com/timeperceptron/Lane-Detection-CarND-P1/blob/master/demo_gifs/final.gif" width="600" >
 
 

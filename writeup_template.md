@@ -40,11 +40,14 @@ My pipeline consisted of 5 steps:
 	
 	1. Filter lines that dont fall within the acceptable angle and y-intercept ranges.
 	
-	2. Filter outliers that dont fall within a factor of Standard Deviation (Standard Deviation is calculated on upto last 12 values - greedily selected)
+	2. Filter outliers that dont fall within a factor of Standard Deviation (Standard Deviation is calculated on upto last 12 values - greedily selected). 
+	
+	Before Filters:
 
-	Before Filters: <img src="https://github.com/timeperceptron/Lane-Detection-CarND-P1/blob/master/demo_gifs/draw_line/no-filter.gif" width="600" >
+	<img src="https://github.com/timeperceptron/Lane-Detection-CarND-P1/blob/master/demo_gifs/draw_line/no-filter.gif" width="600" >
 	
 	After Filters:
+	
 	<img src="https://github.com/timeperceptron/Lane-Detection-CarND-P1/blob/master/demo_gifs/draw_line/filter.gif" width="600" >
 	
 	3. To smoothen the line draw - used a weighted average of current line with mean of Last N lines.Fill in frames with no lines with mean of last N

@@ -72,9 +72,9 @@ Final result after the pipeline:
 
 Some shortcomings:
 
-1. There can be some noise/bad lines very similar to road lanes, with similar angles and y-intercepts,  which can pass thought the thresholds of my filters and adversely affect the mean slope and intercept causing it to deviate. Examples: Duplicate lanes, shadows, merging lanes, deformations/objects on road which resemble the lane etc. Static thresholds tuned for particular samples cannot adapt to varying conditions like the ones mentioned above. 
+1. There can be some noise/bad lines which look very similar to the road lanes, with similar angles and y-intercepts,  which can pass thought the thresholds of my filters and adversely affect the mean slope and intercept causing it to deviate. Examples: Duplicate lanes, shadows, merging lanes, deformations/objects on road which resemble the lane etc. Static thresholds tuned for particular samples cannot adapt to varying conditions like the ones mentioned above. 
 
-2. Constantly winding roads can affect the mean, the current window size of 'N' to calculate last 'N' lines' mean is static value and it is tuned to better perform for roads that dont wind as often. A dynamically adjusting 'N' value is needed to account for rapid changes in the road direction.
+2. Constantly winding roads can adversely affect the mean value of the last 'N' lines, the current window size of 'N' to calculate last 'N' lines' mean is static value and it is tuned to better perform for roads that dont wind as often. A dynamically adjusting 'N' value is needed to account for rapid changes in the road direction.
 
 3. Change in lighting and weather conditions will make the current pipeline perform subpar as the static parameters wont be able to adapt to the challenging conditions.
 
@@ -83,4 +83,4 @@ Some shortcomings:
 
 1. Color conversion or RGB transformation of the image to a form which will help supress noises like shadows and hightlight lanes more.
 
-2. Dynamically adjusting or self-tuning parameters which adapt to varying conditions, specially the following parameters: Region selection, angle and intercept filters,  outlier filters and line smoothing.
+2. Dynamically adjusting or self-tuning parameters which adapt to varying conditions are needed, specially for the following parameters: Region selection, angle and intercept filters,  outlier filters and line smoothing.

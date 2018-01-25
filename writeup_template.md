@@ -83,4 +83,4 @@ Some shortcomings:
 
 1. Color conversion or RGB transformation of the image to a form which will help supress noises like shadows and hightlight lanes more.
 
-2. Dynamically adjusting or self-tuning parameters which adapt to varying conditions are needed, specially for the following parameters: Region selection, angle and intercept filters,  outlier filters and line smoothing.
+2. Dynamically adjusting or self-tuning parameters which adapt to varying conditions are needed, specially for the following: Region selection, angle and intercept filters,  outlier filters and line smoothing.
